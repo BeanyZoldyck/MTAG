@@ -1,9 +1,4 @@
 import random
-path='data.txt'
-with open(path) as f:
-    wordList = f.read().lower().split()
-    f.close()
-ngrams = {}
 #the main algorithm that will run the game
 def Markov(sample, length):
     for i in enumerate(sample):
@@ -25,4 +20,8 @@ def Markov(sample, length):
     return result
 
 if __name__ == '__main__':
+    path=input("Path: ").replace('"','')
+    with open(path) as f:
+        wordList = f.read().lower().split()
+        f.close()
     print(Markov(wordList,random.choice(range(10,50))))
