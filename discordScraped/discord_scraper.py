@@ -1,3 +1,4 @@
+'''
 import requests
 import json
 
@@ -16,3 +17,6 @@ def retrieveMessage(channel):
         except TypeError:
             print(value)
 retrieveMessage('627538418943000597')
+This is a good method for fetching recent messages, not good for my purposes
+'''
+import pyautogui as pag
